@@ -6,9 +6,9 @@
  */
 void swap_int(int *x, int *y)
 {
-    int temp = *x;
-    *x = *y;
-    *y = temp;
+	int temp = *x;
+	*x = *y;
+	*y = temp;
 }
 /**
  * selection_sort -  sorts an array of integers in ascending order
@@ -18,14 +18,14 @@ void swap_int(int *x, int *y)
 void selection_sort(int *array, size_t size)
 {
 	size_t a, b, min;
-	
-	for (a = 0; a < size-1; a++)
+
+	for (a = 0; a < size - 1; a++)
 	{
 		min = a;
-		for (b = a+1; b < size; b++)
+		for (b = a + 1; b < size; b++)
 			if (array[b] < array[min])
 				min = b;
-		if(min != a)
+		if (min != a)
 			swap_int(&array[min], &array[a]);
 	}
 }
